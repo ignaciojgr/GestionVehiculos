@@ -40,4 +40,11 @@ public class Sucursal {
     public void agregarVehiculo (Vehiculo vehiculo){
         this.vehiculo.add(vehiculo);
     }
+    
+    public Double calcularCostoAlquiler(){
+        for (Vehiculo iterador : this.vehiculo){
+            iterador.getCostoBaseAlquiler() * 
+        }
+        return null;
+    }
 }
