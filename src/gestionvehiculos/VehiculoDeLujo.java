@@ -11,6 +11,6 @@ public class VehiculoDeLujo extends Vehiculo implements CostoAlquilerCalculable 
     
     @Override
     public Double calcularCostoAlquiler(){
-        return this.getCostoBaseAlquiler();
+        return this.getCostoBaseAlquiler()*2;
     }
 }
