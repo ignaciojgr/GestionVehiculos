@@ -43,7 +43,9 @@ public class Sucursal {
     
     public Double calcularCostoAlquiler(){
         for (Vehiculo iterador : this.vehiculo){
-            iterador.getCostoBaseAlquiler() * 
+            Double costoSucursal = iterador.getCostoBaseAlquiler()*10000;
+            return costoSucursal;
+            
         }
         return null;
     }
