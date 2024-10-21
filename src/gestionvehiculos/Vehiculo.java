@@ -1,6 +1,6 @@
 package gestionvehiculos;
 
-public class Vehiculo {
+public abstract class Vehiculo {
     private String idVehiculo;
     private String modelo;
     private Double costoBaseAlquiler;
@@ -38,7 +38,6 @@ public class Vehiculo {
         this.costoBaseAlquiler = costoBaseAlquiler;
     }
     
-    public Double calcularCostoAlquiler(){
-        return null;
-    }
+    public abstract Double calcularCostoAlquiler();
+    
 }
