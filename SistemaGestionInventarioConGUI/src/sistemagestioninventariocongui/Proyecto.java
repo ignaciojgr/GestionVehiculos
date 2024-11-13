@@ -55,7 +55,17 @@ public class Proyecto {
             if (task.getIdTask().equals(updatedTask.getIdTask())) {
                 task.setNombre(updatedTask.getNombre());
                 task.setFechaLimite(updatedTask.getFechaLimite());
-                task.setPrioridad(updatedTask.getPrioridad());
+                switch (updatedTask.getPrioridad()) {
+                    case 1:
+                        task.setPrioridad("low");
+                        break;
+                    case 2:
+                        task.setPrioridad("medium");
+                        break;
+                    case 3:
+                        task.setPrioridad("high");
+                        break;      
+                }
                 task.setCompletada(updatedTask.getCompletada());
                 System.out.println("Task updated. New attributes values: \n"
                         + "ID: " + task.getIdTask() + "\n"
@@ -67,24 +77,24 @@ public class Proyecto {
             }
         }
     }
-    
-    public void readTask(){
+
+    public void readTask() {
         Integer contador = 0;
-        for (Task task : tasks){
+        for (Task task : tasks) {
             contador += 1;
             System.out.println("Reading tasks ... \n"
-                            + "TASK " + contador + "\n"
-                            + "------------------------\n"
-                            + "ID: " + task.getIdTask() + "\n"
-                            + "Name: " + task.getNombre() + "\n"
-                            + "Fecha limite: " + task.getFechaLimite() + "\n"
-                            + "Prioridad: " + task.getPrioridad() + "\n"
-                            + "Completada: " + task.getCompletada());
+                    + "TASK " + contador + "\n"
+                    + "------------------------\n"
+                    + "ID: " + task.getIdTask() + "\n"
+                    + "Name: " + task.getNombre() + "\n"
+                    + "Fecha limite: " + task.getFechaLimite() + "\n"
+                    + "Prioridad: " + task.getPrioridad() + "\n"
+                    + "Completada: " + task.getCompletada());
             return;
         }
     }
-    
-    public void removeTask(Task task){
+
+    public void removeTask(Task task) {
         for (Task t : tasks) {
             if (t.getIdTask().equals(task.getIdTask())) {
                 tasks.remove(t);

@@ -49,8 +49,20 @@ public class Task {
         return prioridad;
     }
 
-    public void setPrioridad(Integer prioridad) {
-        this.prioridad = prioridad;
+    public void setPrioridad(String prioridad) {
+        switch (prioridad.toLowerCase()) {
+            case "low":
+                this.prioridad = 1;
+                break;
+            case "medium":
+                this.prioridad = 2;
+                break;
+            case "high":
+                this.prioridad = 3;
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid priority level: " + prioridad);
+        }
     }
 
     public Boolean getCompletada() {
