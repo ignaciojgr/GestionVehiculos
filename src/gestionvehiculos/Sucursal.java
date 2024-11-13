@@ -45,7 +45,6 @@ public class Sucursal {
         Double costoSucursal = 0.0;
         for (Vehiculo iterador : this.vehiculo){
             costoSucursal += iterador.calcularCostoAlquiler();
-            
         }
         return costoSucursal;
     }
