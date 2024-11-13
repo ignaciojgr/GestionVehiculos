@@ -3,7 +3,7 @@ package sistemagestioninventariocongui;
 import java.time.LocalDateTime;
 
 public class Task {
-    private Integer idTask;
+    private String idTask;
     private String nombre;
     private LocalDateTime fechaLimite;
     private Integer prioridad;
@@ -12,7 +12,7 @@ public class Task {
     public Task() {
     }
 
-    public Task(Integer idTask, String nombre, LocalDateTime fechaLimite, Integer prioridad, Boolean completada) {
+    public Task(String idTask, String nombre, LocalDateTime fechaLimite, Integer prioridad, Boolean completada) {
         this.idTask = idTask;
         this.nombre = nombre;
         this.fechaLimite = fechaLimite;
@@ -21,11 +21,11 @@ public class Task {
     }
     
     
-    public Integer getIdTask() {
+    public String getIdTask() {
         return idTask;
     }
 
-    public void setIdTask(Integer idTask) {
+    public void setIdTask(String idTask) {
         this.idTask = idTask;
     }
 
